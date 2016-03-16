@@ -9,6 +9,8 @@
 
   <policy user="root">
     <allow own="org.bluez"/>
+    <allow send_type="method_call"/>
+    <allow send_type="method_return"/>
   </policy>
 
   <policy at_console="true">
@@ -32,6 +34,9 @@
 
     <allow send_destination="org.bluez.Security"/>
     <allow receive_sender="org.bluez.Security"/>
+  </policy>
+  <policy context="default">
+    <allow send_destination="org.bluez"/>
   </policy>
 
 </busconfig>
